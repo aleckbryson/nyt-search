@@ -13,14 +13,22 @@ $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function (response) {
+
+var results = response.response.docs
     $("#searchBtn").on("click", function () {
-        for (var i = 0; i < response.response.docs.length; i++) {
+        for (var i = 0; i < results.length; i++) {
 
-            var newDiv = $("<div>")
+            var titleDiv = $("<h3>")
+            var authorDiv = $("<h4>")
+            var paraDiv = $("<p>")
 
-            newDiv.html(response.response.docs[i].abstract)
+            titleDiv.html(results[i].headline.main)
+            authorDiv.html(results[i].byline.original)
+            paraDiv.html(results[i].abstract)
 
-            displayBox.append(newDiv)
+            displayBox.append(titleDiv)
+            displayBox.append(authorDiv)
+            displayBox.append(paraDiv)
         }
     })
 
