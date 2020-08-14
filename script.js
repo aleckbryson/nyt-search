@@ -3,25 +3,27 @@
 
 var displayBox = $("#results")
 
-var search ="hurricane"
+var search = "hurricane"
 
-var queryURL ="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ search + "&api-key=205xGLUKGrfIcFcy6H6O0cbxQeSaYjD6"
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + "&api-key=205xGLUKGrfIcFcy6H6O0cbxQeSaYjD6"
 
 //API code
 
 $.ajax({
     url: queryURL,
     method: "GET"
-}).then(function(response){
+}).then(function (response) {
+    $("#searchBtn").on("click", function () {
+        for (var i = 0; i < response.response.docs.length; i++) {
 
-    for (var i = 0; i < response.response.docs.length; i++){
+            var newDiv = $("<div>")
 
-        var newDiv = $("<div>")
+            newDiv.html(response.response.docs[i].abstract)
 
-        newDiv.html(response.response.docs[i].abstract)
+            displayBox.append(newDiv)
+        }
+    })
 
-        displayBox.append(newDiv)
-    }
 })
 
 
