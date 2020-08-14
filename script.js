@@ -8,10 +8,10 @@ $.ajax({
     method: "GET"
 }).then(function(response){
 
-    console.log(response)
+    for (var i = 0; i < response.response.docs.length; i++){
 
-    console.log(response.response.docs[0].abstract)
-
+        console.log(response.response.docs[i].abstract)
+    }
 })
 
 
