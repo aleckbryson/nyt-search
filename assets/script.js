@@ -1,4 +1,6 @@
 
+
+
 var search ="hurricane"
 
 var queryURL ="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ search + "&api-key=205xGLUKGrfIcFcy6H6O0cbxQeSaYjD6"
