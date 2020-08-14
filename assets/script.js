@@ -36,6 +36,10 @@ var results = response.response.docs
 })
 
 
+$("#clearBtn").on("click", function() {
+    displayBox.empty()
+})
+
 
 
 
