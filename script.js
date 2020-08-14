@@ -1,7 +1,13 @@
 
+//variables
+
+var displayBox = $("#results")
+
 var search ="hurricane"
 
 var queryURL ="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ search + "&api-key=205xGLUKGrfIcFcy6H6O0cbxQeSaYjD6"
+
+//API code
 
 $.ajax({
     url: queryURL,
@@ -10,7 +16,11 @@ $.ajax({
 
     for (var i = 0; i < response.response.docs.length; i++){
 
-        console.log(response.response.docs[i].abstract)
+        var newDiv = $("<div>")
+
+        newDiv.html(response.response.docs[i].abstract)
+
+        displayBox.append(newDiv)
     }
 })
 
