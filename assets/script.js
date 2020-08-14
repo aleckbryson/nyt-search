@@ -1,4 +1,5 @@
 
+
 //variables
 
 var displayBox = $("#results")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container-form {
     margin-left: auto;
     margin-right: auto;
@@ -24,4 +25,32 @@
     max-width: 90%;
       color: white;
       font-size: large;
+=======
+.container-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    border-color: #C2C2C2;;
+    border-style: solid;
+}
+.container-form h2 {
+    padding:10px;
+    color:black;
+    margin:0;
+    background-color:#c2c2c2;
+    font-size:12pt; /* or whatever */
+  }
+  .container-form form {
+    padding: 20px;
+  }
+  .results {
+    padding: 20px;
+  }
+  .jumbotron {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+      color: white;
+      font-size: large;
+>>>>>>> 73717988b648136dec26e070be9f07e2e4cea3d9
   }
